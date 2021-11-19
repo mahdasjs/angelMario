@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class player : MonoBehaviour
 {
+    public static int coinNum = 0;
     // Start is called before the first frame update
     void Start()
     {
