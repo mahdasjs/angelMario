@@ -5,7 +5,9 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     public GameObject mushroom;
-    private Vector3 validDirection = Vector3.up;
+    private int leftPoint = 10;
+    private int rightPoint = 18;
+    private int direction = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +17,24 @@ public class enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (direction == 1)
+        {
+            mushroom.transform.Translate (Vector3.right*2*Time.deltaTime);
+            direction = 1;
+        }
+        if (mushroom.transform.position.x > rightPoint)
+        {
+            direction = 2;
+        }
+        if (direction == 2)
+        {
+            mushroom.transform.Translate(Vector3.right * -2 * Time.deltaTime);
+            direction = 2;
+        }
+        if (mushroom.transform.position.x < leftPoint)
+        {
+            direction = 1;
+        }
     }
 
     void OnCollisionEnter(Collision collision)
