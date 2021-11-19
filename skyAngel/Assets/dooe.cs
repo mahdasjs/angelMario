@@ -30,4 +30,8 @@ public class dooe : MonoBehaviour
 
         }
     }
+    public void restart()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }
