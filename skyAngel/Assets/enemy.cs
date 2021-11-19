@@ -46,6 +46,10 @@ public class enemy : MonoBehaviour
                 this.gameObject.active = false;
                 mushroom.transform.localScale -= new Vector3(0, 0, 1);
                 mushroom.transform.position = new Vector3(0, -1000, 0);
+            }
+            else if (direction.x == 1 || direction.x == -1)
+            {
+                Debug.Log("stop");
             };
 
         }

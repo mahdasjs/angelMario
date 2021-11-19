@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class dooe : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class dooe : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) &&flag==true)
         {
-            Debug.Log("enter");
+            SceneManager.LoadScene("level1");
 
         }
 
