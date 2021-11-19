@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemy : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class enemy : MonoBehaviour
             }
             else if (direction.x == 1 || direction.x == -1)
             {
-                Debug.Log("stop");
+                SceneManager.LoadScene("gameover");
             };
 
         }
