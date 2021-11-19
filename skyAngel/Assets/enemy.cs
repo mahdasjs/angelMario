@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class enemy : MonoBehaviour
 {
     public GameObject mushroom;
-    private int leftPoint = 10;
-    private int rightPoint = 18;
+    public int leftPoint ;
+    public int rightPoint ;
     private int direction = 1;
+    public int speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class enemy : MonoBehaviour
     {
         if (direction == 1)
         {
-            mushroom.transform.Translate (Vector3.right*2*Time.deltaTime);
+            mushroom.transform.Translate (Vector3.right*speed*Time.deltaTime);
             direction = 1;
         }
         if (mushroom.transform.position.x > rightPoint)
@@ -29,7 +30,7 @@ public class enemy : MonoBehaviour
         }
         if (direction == 2)
         {
-            mushroom.transform.Translate(Vector3.right * -2 * Time.deltaTime);
+            mushroom.transform.Translate(Vector3.right * -speed * Time.deltaTime);
             direction = 2;
         }
         if (mushroom.transform.position.x < leftPoint)

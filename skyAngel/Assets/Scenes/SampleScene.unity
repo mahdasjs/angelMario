@@ -1853,6 +1853,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mushroom: {fileID: 342693747}
+  leftPoint: 10
+  rightPoint: 18
+  speed: 4
 --- !u!1 &145820751
 GameObject:
   m_ObjectHideFlags: 0
